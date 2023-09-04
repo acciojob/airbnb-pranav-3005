@@ -19,7 +19,7 @@ public class HotelManagementService {
     HotelManagementRepository repo=new HotelManagementRepository();
 
     public String addHotel(Hotel hotel) {
-        if(hotel==null || hotel.getHotelName().equals(null) || repo.gethotelMap().containsKey(hotel.getHotelName()) )
+        if(hotel==null || hotel.getHotelName() == null || repo.gethotelMap().containsKey(hotel.getHotelName()) )
             return "FAILURE";
 
         repo.addHotel(hotel);
